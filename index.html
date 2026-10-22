@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>异步寻宝游戏</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <p class="eyebrow">ASYNC TREASURE HUNT</p>
+      <h1>异步寻宝游戏</h1>
+      <p class="subtitle">使用 async / await 完成一场会“等待”的冒险</p>
+    </header>
+
+    <section class="map-card">
+      <div class="map-line"></div>
+      <div class="stage active" data-stage="0"><span>📚</span><b>图书馆</b></div>
+      <div class="stage" data-stage="1"><span>📜</span><b>古文解密</b></div>
+      <div class="stage" data-stage="2"><span>🌉</span><b>迷雾石桥</b></div>
+      <div class="stage" data-stage="3"><span>🏛️</span><b>古老神庙</b></div>
+      <div class="stage" data-stage="4"><span>🧩</span><b>机关密室</b></div>
+      <div class="stage" data-stage="5"><span>💎</span><b>宝藏</b></div>
+      <div id="hero" class="hero">🧭</div>
+    </section>
+
+    <section class="status-card">
+      <div class="status-top">
+        <h2>冒险日志</h2>
+        <span id="progressText">等待出发</span>
+      </div>
+      <div id="log" class="log">
+        <p class="muted">点击“开始寻宝”启动异步任务。</p>
+      </div>
+      <button id="startBtn">开始寻宝</button>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
